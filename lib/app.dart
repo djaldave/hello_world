@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 //this class must extend the "StatelessWidget" base class
 class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
     return MaterialApp(
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
