@@ -9,6 +9,7 @@ void main() {
 //create a new text widget to show some text on the screen
   var app = MaterialApp(
     home: Scaffold(
+      floatingActionButton: FloatingActionButton(),
       appBar: AppBar(
         title: Text("Lets see some images"),
       ),
