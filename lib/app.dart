@@ -3,6 +3,7 @@ import 'package:http/http.dart' show get;
 import 'package:flutter/material.dart';
 import 'models/image_model.dart';
 import 'dart:convert';
+import 'widgets/image_list.dart';
 //create a clas that will be our custom widget
 
 class App extends StatefulWidget {
@@ -28,7 +29,7 @@ class AppState extends State<App> {
   Widget build(context) {
     return MaterialApp(
       home: Scaffold(
-        body: Text("$counter"),
+        body: ImageList(images),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.clear),
           onPressed: fetchImage,
