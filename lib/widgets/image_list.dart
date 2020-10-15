@@ -25,7 +25,10 @@ Widget buildImage(ImageModel image) {
     margin: EdgeInsets.all(20.0),
     child: Column(
       children: <Widget>[
-        Image.network(image.url),
+        Padding(
+          child: Image.network(image.url),
+          padding: EdgeInsets.only(bottom: 8),
+        ),
         Text(image.title),
       ],
     ),
