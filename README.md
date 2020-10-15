@@ -1,4 +1,4 @@
-# hello_world
+# Flutter Sample APP
 
 A new Flutter project.
 
