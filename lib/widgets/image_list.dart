@@ -10,8 +10,12 @@ class ImageList extends StatelessWidget {
     return ListView.builder(
       itemCount: images.length,
       itemBuilder: (context, int index) {
-        return Image.network(images[index].url);
+        return Container(
+          margin: EdgeInsets.all(20.0),
+          child: Image.network(images[index].url),
+        );
       },
     );
   }
 }
+// Image.network(images[index].url)
