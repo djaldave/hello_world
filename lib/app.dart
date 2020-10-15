@@ -1,6 +1,8 @@
 // import flutter helper library
 import 'package:http/http.dart' show get;
 import 'package:flutter/material.dart';
+import 'models/image_model.dart';
+import 'dart:convert';
 //create a clas that will be our custom widget
 
 class App extends StatefulWidget {
@@ -12,9 +14,11 @@ class App extends StatefulWidget {
 //this class must extend the "StatelessWidget" base class
 class AppState extends State<App> {
   int counter = 0;
-  void fetchImage() {
+  void fetchImage() async {
     counter++;
-    get('https://jsonplaceholder.typicode.com/photos/$counter');
+    var response =
+        await get('https://jsonplaceholder.typicode.com/photos/$counter');
+    var imageModel = ImageModel.fromJson(json.decode(response.body));
   }
 
   Widget build(context) {
